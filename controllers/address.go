@@ -69,6 +69,7 @@ func AddAddress() gin.HandlerFunc {
 			if err != nil {
 				fmt.Println(err)
 			}
+			c.IndentedJSON(http.StatusOK, "Add address success")
 		} else {
 			c.IndentedJSON(http.StatusBadRequest, "Not Allowed")
 		}
@@ -150,7 +151,7 @@ func EditWorkAddress() gin.HandlerFunc {
 		}
 		defer cancel()
 		ctx.Done()
-		c.IndentedJSON(http.StatusOK, "Successfully update the home address")
+		c.IndentedJSON(http.StatusOK, "Successfully update the work address")
 	}
 }
 
