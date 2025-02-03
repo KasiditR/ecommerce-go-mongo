@@ -5,9 +5,7 @@ docker-compose up -d
 go run main.go
 ```
 
-### POST SIGNUP
-
-http://localhost:8000/users/signup
+### POST /users/signup
 
 Request
 
@@ -27,9 +25,7 @@ Response
 Successfully signed in
 ```
 
-### POST LOGIN
-
-http://localhost:8000/users/login
+### POST /users/login
 
 Request
 
@@ -61,9 +57,7 @@ Response
 }
 ```
 
-### POST ADD PRODUCT
-
-http://localhost:8000/admin/addproduct
+### POST /admin/addproduct
 
 Request
 
@@ -82,9 +76,7 @@ Response
 successfully added
 ```
 
-### POST ADD ADDRESS
-
-http://localhost:8000/users/addaddress?userID=xxxxxxxxxxxxx
+### POST /users/addaddress?userID=xxxxxxxxxxxxx
 
 Request
 
@@ -103,9 +95,7 @@ Response
 Add address success
 ```
 
-### PUT EDIT HOME ADDRESS
-
-http://localhost:8000/users/edithomeaddress?userID=xxxxxxxxxxxxx
+### PUT /users/edithomeaddress?userID=xxxxxxxxxxxxx
 
 Request
 
@@ -124,9 +114,7 @@ Response
 Successfully update the home address
 ```
 
-### PUT EDIT WORK ADDRESS
-
-http://localhost:8000/users/editworkaddress?userID=xxxxxxxxxxxxx
+### PUT /users/editworkaddress?userID=xxxxxxxxxxxxx
 
 Request
 
@@ -145,9 +133,7 @@ Response
 Successfully update the work address
 ```
 
-### DELETE DELETE ADDRESS
-
-http://localhost:8000/users/deleteaddress?userID=xxxxxxxxxxxxx
+### DELETE /users/deleteaddress?userID=xxxxxxxxxxxxx
 
 Response
 
@@ -155,9 +141,7 @@ Response
 Successfully Deleted
 ```
 
-### GET USER
-
-http://localhost:8000/users?userID=xxxxxxxxxxxxx
+### GET /users?userID=xxxxxxxxxxxxx
 
 Response
 
@@ -180,9 +164,7 @@ Response
 }
 ```
 
-### GET PRODUCT VIEW
-
-http://localhost:8000/users/productview
+### GET /users/productview
 
 Response
 
@@ -205,9 +187,7 @@ Response
 ]
 ```
 
-### GET SEARCH
-
-http://localhost:8000/users/search?name=Ip
+### GET /users/search?name=Ip
 
 Response
 
@@ -223,19 +203,9 @@ Response
 ]
 ```
 
-### GET ADD TO CART
+### GET /users/addtocart?id=xxxxxxxxxxxxx&userID=xxxxxxxxxxxxx
 
-http://localhost:8000/users/addtocart?id=xxxxxxxxxxxxx&userID=xxxxxxxxxxxxx
-
-Response
-
-```text
-Successfully
-```
-
-### GET REMOVE ITEM
-
-http://localhost:8000/users/removeitem?id=xxxxxxxxxxxxx&userID=xxxxxxxxxxxxx
+Authorization: Bearer {JWT_TOKEN}
 
 Response
 
@@ -243,9 +213,19 @@ Response
 Successfully
 ```
 
-### GET CART CHECK OUT
+### GET /users/removeitem?id=xxxxxxxxxxxxx&userID=xxxxxxxxxxxxx
 
-http://localhost:8000/users/cartcheckout?userID=xxxxxxxxxxxxx
+Authorization: Bearer {JWT_TOKEN}
+
+Response
+
+```text
+Successfully
+```
+
+### GET /users/cartcheckout?userID=xxxxxxxxxxxxx
+
+Authorization: Bearer {JWT_TOKEN}
 
 Response
 
@@ -253,9 +233,9 @@ Response
 Successfully place order
 ```
 
-### GET INSTANT BUY
+### GET /users/instantbuy?id=xxxxxxxxxxxxx&userID=xxxxxxxxxxxxx
 
-http://localhost:8000/users/instantbuy?id=xxxxxxxxxxxxx&userID=xxxxxxxxxxxxx
+Authorization: Bearer {JWT_TOKEN}
 
 Response
 
